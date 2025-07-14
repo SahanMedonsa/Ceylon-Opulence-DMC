@@ -11,7 +11,7 @@ const socialLinks = [
 export default function HeroSection() {
   return (
     <section
-      className="hero h-[90vh] min-h-[500px] flex items-center justify-center relative bg-cover bg-center"
+      className="hero h-[100vh] min-h-[500px] flex items-center justify-center relative bg-cover bg-center"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url('/hero-image.jpg')",
