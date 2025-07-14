@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="section-title text-4xl font-bold text-center mb-12 text-green-500">About Ceylon Opulence DMC</h1>
+      <h1 className="section-title text-4xl font-bold text-center mb-12 text-green-500 pt-16">About Ceylon Opulence DMC</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         <div className="about-card bg-white rounded-lg shadow-md p-8 text-center">
           <h3 className="text-green-500 text-xl font-semibold mb-4">Our Story</h3>

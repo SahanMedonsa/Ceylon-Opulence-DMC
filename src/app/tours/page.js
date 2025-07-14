@@ -1,7 +1,7 @@
 export default function Tours() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="section-title text-4xl font-bold text-center mb-12 text-green-500">Tours & Experiences</h1>
+      <h1 className="section-title text-4xl font-bold text-center mb-12 text-green-500 pt-16">Tours & Experiences</h1>
       {/* Cultural Heritage Tours */}
       <div className="mb-12">
         <h3 className="text-2xl text-green-500 font-semibold mb-6 border-b-2 border-green-500 pb-2">Cultural Heritage Tours</h3>

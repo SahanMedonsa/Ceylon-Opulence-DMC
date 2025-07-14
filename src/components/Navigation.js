@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaBars } from "react-icons/fa";
 
 const navLinks = [
@@ -17,6 +17,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -37,8 +38,16 @@ export default function Navigation() {
       ? "bg-white/30 backdrop-blur-md shadow-lg border border-white/30"
       : "bg-black/90 shadow-lg border border-neutral-800";
 
+  // Handle mobile link click
+  const handleNavClick = (href) => {
+    setMenuOpen(false);
+    if (pathname !== href) {
+      router.push(href);
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center bg-transparent pointer-events-none transition-colors duration-300 pt-4">
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center bg-transparent transition-colors duration-300 pt-4">
       <div
         className={`max-w-4xl w-[95vw] mx-auto flex items-center justify-between px-4 py-2 rounded-full pointer-events-auto ${navBg} transition-colors duration-300`}
       >
@@ -71,13 +80,12 @@ export default function Navigation() {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block text-base font-medium text-white hover:text-green-400 px-2 py-2 rounded-lg"
-                  onClick={() => setMenuOpen(false)}
+                <button
+                  className="block w-full text-left text-base font-medium text-white hover:text-green-400 px-2 py-2 rounded-lg bg-transparent border-none outline-none"
+                  onClick={() => handleNavClick(link.href)}
                 >
                   {link.label}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
