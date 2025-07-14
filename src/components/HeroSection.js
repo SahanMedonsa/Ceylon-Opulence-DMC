@@ -11,7 +11,7 @@ const socialLinks = [
 export default function HeroSection() {
   return (
     <section
-      className="hero h-[100vh] min-h-[500px] flex items-center justify-center relative bg-cover bg-center"
+      className="hero h-[90vh] min-h-[500px] flex items-center justify-center relative bg-cover bg-center"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url('/hero-image.jpg')",
@@ -19,7 +19,7 @@ export default function HeroSection() {
     >
       <div className="hero-content w-full max-w-3xl mx-auto flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-          Explore Sri Lanka's Ancient Heritage & Natural Wonders
+          Explore Sri Lanka&apos;s Ancient Heritage &amp; Natural Wonders
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">
           Experience the beauty, culture, and adventure of Ceylon through our expertly crafted tours that celebrate heritage preservation and sustainable tourism.
